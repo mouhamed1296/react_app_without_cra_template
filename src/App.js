@@ -1,5 +1,5 @@
 import './app.css'
-import FormInput from './components/FormInput'
+import { Form, FormElement } from 'sard-form'
 
 const App = () => {
 
@@ -11,13 +11,41 @@ const App = () => {
 
   return (
     <div className="app">
-     <form onSubmit={handleSubmit}>
-       <FormInput name="username" placeholder="Username" />
-       <FormInput name="email" placeholder="Email" />
-       <FormInput name="fullname" placeholder="Full Name" />
-       <FormInput name="job" placeholder="Job Title" />
-       <button>Submit</button>
-     </form>
+     <Form onSubmit={handleSubmit} className="form">
+       <FormElement
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Username"
+        className="form-input"
+        label={{
+          content: "Username"
+        }}
+        wrap={{
+          in: "div",
+          className: "form-group"
+        }}
+      />
+      <FormElement
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="form-input"
+      />
+      <FormElement
+        type="text"
+        name="fullname"
+        placeholder="Full Name"
+        className="form-input"
+      />
+      <FormElement
+        type="text"
+        name="job"
+        placeholder="Job Title"
+        className="form-input"
+      />
+      <FormElement type="button" className="btn">Submit</FormElement>
+     </Form>
     </div>
   )
 }

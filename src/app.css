@@ -4,3 +4,27 @@
     align-items: center;
     height: 100vh;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-input {
+    padding: 15px;
+    margin: 10px 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+}
