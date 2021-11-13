@@ -18,6 +18,14 @@
     padding: 15px;
     margin: 10px 0;
 }
+
+.error {
+    padding: 0.7rem;
+    background-color: rgb(243, 211, 211);
+    color: rgb(218, 54, 54);
+    border-radius: 3px;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
